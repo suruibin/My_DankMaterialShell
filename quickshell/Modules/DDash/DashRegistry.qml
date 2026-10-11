@@ -153,6 +153,17 @@ Singleton {
                 ]), number("columns", I18n.tr("Columns", "number of columns in the wallpaper grid option"), 4, DashMetrics.wallpaperColumnsMin, DashMetrics.wallpaperColumnsMax), number("rows", I18n.tr("Rows", "number of rows in the wallpaper grid option"), 4, DashMetrics.wallpaperRowsMin, DashMetrics.wallpaperRowsMax), toggle("filename", I18n.tr("Show filename"), true)]
         },
         {
+            "id": "programs",
+            "text": I18n.tr("Programs", "dashboard programs tab name"),
+            "icon": "apps",
+            "description": I18n.tr("AppImages and desktop applications"),
+            "tab": {
+                "component": programsTab,
+                "async": true,
+                "sizeToContent": true
+            }
+        },
+        {
             "id": "weather",
             "text": I18n.tr("Weather"),
             "icon": "wb_sunny",
@@ -728,6 +739,11 @@ Singleton {
     Component {
         id: wallpaperTab
         WallpaperTab {}
+    }
+
+    Component {
+        id: programsTab
+        ProgramsTab {}
     }
 
     Component {

@@ -505,6 +505,10 @@ Singleton {
             "enabled": true
         },
         {
+            "id": "programs",
+            "enabled": true
+        },
+        {
             "id": "weather",
             "enabled": true
         },
