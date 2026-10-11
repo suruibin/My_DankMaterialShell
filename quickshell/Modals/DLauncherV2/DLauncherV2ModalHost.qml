@@ -99,8 +99,8 @@ Item {
 
     readonly property string _dmenuSizeOverride: (spotlightContent?.controller?.searchMode === "dmenu") ? (spotlightContent.controller.dmenuSize || "") : ""
 
-    readonly property int baseWidth: LauncherMetrics.sizeWidth(_dmenuSizeOverride || SettingsData.dankLauncherV2Size)
-    readonly property int baseHeight: LauncherMetrics.sizeHeight(_dmenuSizeOverride || SettingsData.dankLauncherV2Size)
+    readonly property int baseWidth: Math.round(screenWidth / 2)
+    readonly property int baseHeight: Math.round(screenHeight * 0.6)
     readonly property real _contentImplicitH: launcherContentLoader.item?.implicitHeight ?? LauncherMetrics.pillHeight
     readonly property int modalWidth: Math.min(spotlight ? (_dmenuSizeOverride ? LauncherMetrics.sizeWidth(_dmenuSizeOverride) : LauncherMetrics.spotlightWidth) : baseWidth, screenWidth - LauncherMetrics.screenMargin)
     readonly property int modalHeight: spotlight ? _contentImplicitH : Math.min(baseHeight, screenHeight - LauncherMetrics.screenMargin)
